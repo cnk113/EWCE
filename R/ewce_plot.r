@@ -97,8 +97,8 @@ ewce_plot <- function(total_res, mtc_method = "bonferroni", ctd = NULL) {
 
     # Mark significant rows with asterixes
     ast_q <- rep("", dim(total_res)[1])
-    ast_q[total_res$q < 0.05] <- "**"
     ast_q[total_res$p < 0.05] <- "*"
+    ast_q[total_res$q < 0.05] <- "**"
     total_res$ast_q <- ast_q
 
     # GENERATE THE PLOT
